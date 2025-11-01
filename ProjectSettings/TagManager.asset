@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Inimigo
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Piso
+  - Obstaculo
+  - Inimigo
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Lua
+    uniqueID: 3764304563
+    locked: 0
+  - name: Nuvens 1
+    uniqueID: 239185717
+    locked: 0
+  - name: Nuvens 2
+    uniqueID: 3755440937
+    locked: 0
+  - name: Arvores
+    uniqueID: 1156534387
+    locked: 0
+  - name: Cemiterio
+    uniqueID: 1080021527
+    locked: 0
+  - name: Covas
+    uniqueID: 2750159977
+    locked: 0
+  - name: Cerca
+    uniqueID: 144055023
+    locked: 0
+  - name: "Ch\xE3o SC"
+    uniqueID: 4228342267
+    locked: 0
+  - name: "Ch\xE3o C"
+    uniqueID: 4095502563
+    locked: 0
+  - name: Jogador
+    uniqueID: 2353754173
+    locked: 0
+  - name: "Ch\xE3o Frente"
+    uniqueID: 1832278363
+    locked: 0
+  m_RenderingLayers:
+  - Default
