@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;  
 
 public class PlacarInimigos : MonoBehaviour
 {
@@ -18,6 +19,16 @@ public class PlacarInimigos : MonoBehaviour
     void AtualizarPlacar()
     {
         int inimigosRestantes = GameObject.FindGameObjectsWithTag("Inimigo").Length;
-        textoPlacar.text = "Inimigos restantes: " + inimigosRestantes + inimigosRestantes +inimigosRestantes;
+        textoPlacar.text = "Inimigos restantes: " + inimigosRestantes;
+
+        if (inimigosRestantes == 0)
+        {
+            CarregarProximaCena();
+        }
+    }
+
+    void CarregarProximaCena()
+    {
+        SceneManager.LoadScene("Braco"); 
     }
 }

@@ -219,6 +219,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -240,6 +242,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -199464733
   m_SortingLayer: 9
   m_SortingOrder: 5
@@ -428,6 +431,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -449,6 +454,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -66625029
   m_SortingLayer: 8
   m_SortingOrder: 1
@@ -539,8 +545,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: -1
 --- !u!212 &164379658
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -561,6 +565,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -582,6 +588,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -66625029
   m_SortingLayer: 8
   m_SortingOrder: 0
@@ -616,7 +623,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 283e1f50072ac6e4e886859e38ab39d3, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 283e1f50072ac6e4e886859e38ab39d3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -713,7 +720,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d1d1696b5fc2ff249a9da8c526126281, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: d1d1696b5fc2ff249a9da8c526126281, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -800,6 +807,47 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &182486562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182486550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e651bfe14d1d9548ba44889ccfa1d17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeroiAtaque
+  attack: {fileID: 8300000, guid: d1d1696b5fc2ff249a9da8c526126281, type: 3}
+  audioSource: {fileID: 0}
+  "Come\xE7oTempo": 0
+  AreaAtaqueX: 0
+  AreaAtaqueY: 0
+  Ataquepos: {fileID: 0}
+  DetectorInimigo:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &182486563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182486550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c59b012c6087143a4b4056f6ba786d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptHeroi1
+  Mascara:
+    serializedVersion: 2
+    m_Bits: 64
+  pe: {fileID: 3258560952114404028}
+  Velocidade: 4
+  Pulo: 350
+  sompulo: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &190237559
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,8 +893,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: -1
 --- !u!212 &190237562
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -867,6 +913,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -888,6 +936,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -66625029
   m_SortingLayer: 8
   m_SortingOrder: 0
@@ -949,8 +998,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: 0.6
 --- !u!212 &226917086
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -971,6 +1018,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -992,6 +1041,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -539526359
   m_SortingLayer: 3
   m_SortingOrder: 0
@@ -1059,8 +1109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: 1
 --- !u!212 &242709596
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1081,6 +1129,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1102,6 +1152,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -66625029
   m_SortingLayer: 8
   m_SortingOrder: 0
@@ -1216,6 +1267,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1237,6 +1290,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -199464733
   m_SortingLayer: 9
   m_SortingOrder: 5
@@ -1381,6 +1435,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1402,6 +1458,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -199464733
   m_SortingLayer: 9
   m_SortingOrder: 5
@@ -1453,6 +1510,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1474,6 +1533,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1832278363
   m_SortingLayer: 11
   m_SortingOrder: 0
@@ -1603,6 +1663,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1624,6 +1686,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -199464733
   m_SortingLayer: 9
   m_SortingOrder: 5
@@ -1698,8 +1761,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: 0.9
 --- !u!212 &467819125
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1720,6 +1781,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1741,6 +1804,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -1755,6 +1819,148 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &482917535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 482917538}
+  - component: {fileID: 482917537}
+  - component: {fileID: 482917536}
+  m_Layer: 0
+  m_Name: MusicaFundo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &482917536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482917535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5de36ecc3eea8469a39850441b59d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &482917537
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482917535}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: fab23785150094e4681920b2b7ee9b40, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &482917538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482917535}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 464, y: 236, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &496463447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,8 +2006,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: 0.4
 --- !u!212 &496463450
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1822,6 +2026,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1843,6 +2049,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -1922,7 +2129,6 @@ MonoBehaviour:
   m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
-  m_Version: 2
   m_TaaSettings:
     m_Quality: 3
     m_FrameInfluence: 0.1
@@ -1930,6 +2136,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -2087,8 +2294,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: -1
 --- !u!212 &524252443
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2109,6 +2314,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2130,6 +2337,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -66625029
   m_SortingLayer: 8
   m_SortingOrder: 0
@@ -2259,6 +2467,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2280,6 +2490,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -199464733
   m_SortingLayer: 9
   m_SortingOrder: 5
@@ -2339,8 +2550,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: -0.8
 --- !u!212 &581303250
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2361,6 +2570,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2382,6 +2593,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -530662733
   m_SortingLayer: 1
   m_SortingOrder: 0
@@ -2511,6 +2723,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2532,6 +2746,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -199464733
   m_SortingLayer: 9
   m_SortingOrder: 5
@@ -2646,6 +2861,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2667,6 +2884,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -199464733
   m_SortingLayer: 9
   m_SortingOrder: 5
@@ -2755,6 +2973,8 @@ TilemapRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2776,6 +2996,7 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -199464733
   m_SortingLayer: 9
   m_SortingOrder: 2
@@ -5290,8 +5511,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: 0.9
 --- !u!212 &661391030
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5312,6 +5531,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5333,6 +5554,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -5422,7 +5644,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 821859d8c349d154a87925e169018211, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 821859d8c349d154a87925e169018211, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -5561,6 +5783,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5582,6 +5806,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -66625029
   m_SortingLayer: 8
   m_SortingOrder: 1
@@ -5774,8 +5999,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: 0.6
 --- !u!212 &781103717
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5796,6 +6019,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5817,6 +6042,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -539526359
   m_SortingLayer: 3
   m_SortingOrder: 0
@@ -5906,7 +6132,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 821859d8c349d154a87925e169018211, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 821859d8c349d154a87925e169018211, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -6038,8 +6264,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: -1
 --- !u!212 &913734225
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6060,6 +6284,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6081,6 +6307,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -66625029
   m_SortingLayer: 8
   m_SortingOrder: 0
@@ -6140,8 +6367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: 0.6
 --- !u!212 &944477609
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6162,6 +6387,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6183,6 +6410,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -539526359
   m_SortingLayer: 3
   m_SortingOrder: 0
@@ -6251,6 +6479,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6272,6 +6502,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -199464733
   m_SortingLayer: 9
   m_SortingOrder: 5
@@ -6392,8 +6623,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: -1
 --- !u!212 &1048383862
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6414,6 +6643,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6435,6 +6666,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -66625029
   m_SortingLayer: 8
   m_SortingOrder: 0
@@ -6494,8 +6726,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: 0.9
 --- !u!212 &1076164305
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6516,6 +6746,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6537,6 +6769,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -6598,8 +6831,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: 0.7
 --- !u!212 &1143369521
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6620,6 +6851,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6641,6 +6874,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 239185717
   m_SortingLayer: 2
   m_SortingOrder: 0
@@ -6755,6 +6989,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6776,6 +7012,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -199464733
   m_SortingLayer: 9
   m_SortingOrder: 5
@@ -6905,6 +7142,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6926,6 +7165,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -199464733
   m_SortingLayer: 9
   m_SortingOrder: 5
@@ -7030,7 +7270,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 821859d8c349d154a87925e169018211, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 821859d8c349d154a87925e169018211, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -7162,8 +7402,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: -1
 --- !u!212 &1296188470
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7184,6 +7422,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7205,6 +7445,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -66625029
   m_SortingLayer: 8
   m_SortingOrder: 0
@@ -7264,8 +7505,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: 0.7
 --- !u!212 &1359773100
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7286,6 +7525,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7307,6 +7548,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 239185717
   m_SortingLayer: 2
   m_SortingOrder: 0
@@ -7366,8 +7608,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: 0.5
 --- !u!212 &1381995433
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7388,6 +7628,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7409,6 +7651,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1156534387
   m_SortingLayer: 4
   m_SortingOrder: 0
@@ -7460,6 +7703,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7481,6 +7726,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1080021527
   m_SortingLayer: 5
   m_SortingOrder: 1
@@ -7585,7 +7831,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 821859d8c349d154a87925e169018211, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 821859d8c349d154a87925e169018211, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -7729,6 +7975,8 @@ TilemapRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7750,6 +7998,7 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -199464733
   m_SortingLayer: 9
   m_SortingOrder: 3
@@ -8039,7 +8288,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 821859d8c349d154a87925e169018211, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 821859d8c349d154a87925e169018211, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -8173,8 +8422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: 0.5
 --- !u!212 &1709788331
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8195,6 +8442,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8216,6 +8465,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1156534387
   m_SortingLayer: 4
   m_SortingOrder: 0
@@ -8275,8 +8525,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: -1
 --- !u!212 &1713027570
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8297,6 +8545,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8318,6 +8568,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -66625029
   m_SortingLayer: 8
   m_SortingOrder: 0
@@ -8413,6 +8664,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8434,6 +8687,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1832278363
   m_SortingLayer: 11
   m_SortingOrder: 0
@@ -8639,6 +8893,8 @@ TilemapRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8660,6 +8916,7 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -66625029
   m_SortingLayer: 8
   m_SortingOrder: 1
@@ -10949,8 +11206,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: -1
 --- !u!212 &2082309851
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10971,6 +11226,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10992,6 +11249,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -66625029
   m_SortingLayer: 8
   m_SortingOrder: 0
@@ -11051,8 +11309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: 0.5
 --- !u!212 &2097172416
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11073,6 +11329,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11094,6 +11352,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1156534387
   m_SortingLayer: 4
   m_SortingOrder: 0
@@ -11200,8 +11459,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f359e1d2935a8454583be0c18908d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 98753815}
-  parallaxEffect: 0.7
 --- !u!212 &2145392272
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11222,6 +11479,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11243,6 +11502,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 239185717
   m_SortingLayer: 2
   m_SortingOrder: 0
@@ -11309,6 +11569,10 @@ PrefabInstance:
       propertyPath: Pulo
       value: 400
       objectReference: {fileID: 0}
+    - target: {fileID: 337816911146186086, guid: 23217d6674488854ab34f57e758b8575, type: 3}
+      propertyPath: sompulo
+      value: 
+      objectReference: {fileID: 8300000, guid: dbbbe82865eac7c4d83448c2b64489c9, type: 3}
     - target: {fileID: 1489766356246856054, guid: 23217d6674488854ab34f57e758b8575, type: 3}
       propertyPath: "Come\xE7oTempo"
       value: 0.1
@@ -11317,10 +11581,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heroi
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 337816911146186086, guid: 23217d6674488854ab34f57e758b8575, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9075451086493350883, guid: 23217d6674488854ab34f57e758b8575, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 182486563}
+    - targetCorrespondingSourceObject: {fileID: 9075451086493350883, guid: 23217d6674488854ab34f57e758b8575, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 182486562}
     - targetCorrespondingSourceObject: {fileID: 9075451086493350883, guid: 23217d6674488854ab34f57e758b8575, type: 3}
       insertIndex: -1
       addedObject: {fileID: 182486556}
@@ -11328,6 +11599,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 182486555}
   m_SourcePrefab: {fileID: 100100000, guid: 23217d6674488854ab34f57e758b8575, type: 3}
+--- !u!1 &3258560952114404028 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6237131965822628460, guid: 23217d6674488854ab34f57e758b8575, type: 3}
+  m_PrefabInstance: {fileID: 3258560952114404027}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6138092696173175665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11403,7 +11679,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 821859d8c349d154a87925e169018211, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 821859d8c349d154a87925e169018211, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -11519,3 +11795,4 @@ SceneRoots:
   - {fileID: 1951622375}
   - {fileID: 756187054}
   - {fileID: 1968004711}
+  - {fileID: 482917538}
