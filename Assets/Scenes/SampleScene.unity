@@ -828,26 +828,6 @@ MonoBehaviour:
   DetectorInimigo:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &182486563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 182486550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0c59b012c6087143a4b4056f6ba786d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScriptHeroi1
-  Mascara:
-    serializedVersion: 2
-    m_Bits: 64
-  pe: {fileID: 3258560952114404028}
-  Velocidade: 4
-  Pulo: 350
-  sompulo: {fileID: 0}
-  audioSource: {fileID: 0}
 --- !u!1 &190237559
 GameObject:
   m_ObjectHideFlags: 0
@@ -11581,16 +11561,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heroi
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 337816911146186086, guid: 23217d6674488854ab34f57e758b8575, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9075451086493350883, guid: 23217d6674488854ab34f57e758b8575, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 182486563}
-    - targetCorrespondingSourceObject: {fileID: 9075451086493350883, guid: 23217d6674488854ab34f57e758b8575, type: 3}
-      insertIndex: 4
+      insertIndex: 3
       addedObject: {fileID: 182486562}
     - targetCorrespondingSourceObject: {fileID: 9075451086493350883, guid: 23217d6674488854ab34f57e758b8575, type: 3}
       insertIndex: -1
@@ -11599,11 +11575,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 182486555}
   m_SourcePrefab: {fileID: 100100000, guid: 23217d6674488854ab34f57e758b8575, type: 3}
---- !u!1 &3258560952114404028 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6237131965822628460, guid: 23217d6674488854ab34f57e758b8575, type: 3}
-  m_PrefabInstance: {fileID: 3258560952114404027}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6138092696173175665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11771,6 +11742,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 482917538}
   - {fileID: 98753818}
   - {fileID: 6138092696173175665}
   - {fileID: 3258560952114404027}
@@ -11795,4 +11767,3 @@ SceneRoots:
   - {fileID: 1951622375}
   - {fileID: 756187054}
   - {fileID: 1968004711}
-  - {fileID: 482917538}
